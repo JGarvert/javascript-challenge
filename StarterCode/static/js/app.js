@@ -32,5 +32,13 @@ filter_button.on("click", function() {
 
     output_table.html("");
 
-
-})
+    if (date_filter.length !== 0){
+        input_data(date_filter);
+    }
+    else if (date_filter.length === 0){
+        input_data(tableData);
+    }
+    else {
+        output_table.append("tr").append("td").text("Nothing found.");
+    }
+});
