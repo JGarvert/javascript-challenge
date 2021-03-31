@@ -22,3 +22,15 @@ var input_data = (data_source ) => {
 
 }
 input_data(tableData);
+
+// On watch event on button
+filter_button.on("click", function() {
+    d3.event.preventDefault();
+
+    var enter_date = date_crit.property("value").trim();
+    var date_filter = tableData.filter(tableData =>tableData.datetime === enter_date);
+
+    output_table.html("");
+
+
+})
