@@ -51,3 +51,20 @@ filter_button.on("click", function() {
            // cell.text(value);
         //});
     //});
+
+
+    // Function to handle input change
+// const handleChange = () => {
+    // grab the value of the input field
+    // let value = d3.event.target.value;
+  
+    // clear the existing output
+    // output.html("");
+  
+    // let frequencyCounts = counter(value);
+   //  Object.entries(frequencyCounts).forEach(([key, value]) => {
+     //  let li = output.append("li").text(`${key}: ${value}`);
+  //   });
+  // }
+  
+  // text.on("change", handleChange);
