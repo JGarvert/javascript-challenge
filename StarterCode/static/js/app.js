@@ -29,7 +29,7 @@ filter_button.on("click", function() {
     d3.event.preventDefault();
 
     var entered_date = date_crit.property("value").trim();
-    var date_filter = tableData.filter(tableData =>tableData.datetime === entered_date);
+    var date_filter = tableData.filter(table_Data =>table_Data.datetime === entered_date);
 
     output.html("");
 
