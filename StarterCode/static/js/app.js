@@ -1,4 +1,4 @@
-// from data.js
+// from data.js, set variable table to the data table
 var tableData = data;
 
 // Use D3 to select object in the HTML code.
@@ -7,13 +7,14 @@ var output = d3.select("tbody");
 var filter_button = d3.select("#filter-btn");
 var date_crit = d3.select("#datetime");
 
-// Retrieve JSON keys
+// Retrieve keys
 var key_list = Object.keys(tableData[0])
+//console.log(key_list);
 
 // Fill HTML table with data.
 var input_data = (data_source ) => {
     data_source.forEach(sighting => {
-        var next_row = output_table.append("tr");
+        var next_row = output.append("tr");
         key_list.forEach(key => {
             next_row.append("td").text(sighting[key]);
         });
@@ -31,6 +32,8 @@ filter_button.on("click", function() {
     var date_filter = tableData.filter(tableData =>tableData.datetime === enter_date);
 
     output_table.html("");
+
+    // 
 
     if (date_filter.length !== 0){
         input_data(date_filter);
