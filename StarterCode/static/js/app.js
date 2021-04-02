@@ -28,10 +28,10 @@ input_data(tableData);
 filter_button.on("click", function() {
     d3.event.preventDefault();
 
-    var enter_date = date_crit.property("value").trim();
-    var date_filter = tableData.filter(tableData =>tableData.datetime === enter_date);
+    var entered_date = date_crit.property("value").trim();
+    var date_filter = tableData.filter(tableData =>tableData.datetime === entered_date);
 
-    output_table.html("");
+    output.html("");
 
     // 
 
@@ -42,6 +42,6 @@ filter_button.on("click", function() {
         input_data(tableData);
     }
     else {
-        output_table.append("tr").append("td").text("Nothing found.");
+        output.append("tr").append("td").text("Nothing found.");
     }
 });
