@@ -24,24 +24,30 @@ var tabledata = (data_source ) => {
 }
 tabledata(tableData);
 
-// On watch event on button
+// On listner event on button
 filter_button.on("click", function() {
     d3.event.preventDefault();
 
     var entered_date = date_crit.property("value").trim();
     var date_filter = tableData.filter(table_Data =>table_Data.datetime === entered_date);
-
     output.html("");
 
-    // 
-
     if (date_filter.length !== 0){
-        input_data(date_filter);
-    }
+            input_data(date_filter);
+     }
     else if (date_filter.length === 0){
-        input_data(tableData);
-    }
+            input_data(tableData);
+        }
     else {
-        output.append("tr").append("td").text("Nothing found.");
-    }
-});
+            output.append("tr").append("td").text("Nothing found.");
+        }
+    });
+
+
+   // data.forEach((sighting) => {
+     //   let row = tbody.append("tr");
+       // Object.values(sightings).forEach(value => (
+         //   let cell = row.append("td");
+           // cell.text(value);
+        //});
+    //});
