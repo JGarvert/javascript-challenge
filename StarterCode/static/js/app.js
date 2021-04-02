@@ -12,7 +12,7 @@ var key_list = Object.keys(tableData[0])
 //console.log(key_list);
 
 // Fill HTML table with data.
-var input_data = (data_source ) => {
+var tabledata = (data_source ) => {
     data_source.forEach(sighting => {
         var next_row = output.append("tr");
         key_list.forEach(key => {
@@ -22,7 +22,7 @@ var input_data = (data_source ) => {
     });
 
 }
-input_data(tableData);
+tabledata(tableData);
 
 // On watch event on button
 filter_button.on("click", function() {
