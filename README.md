@@ -1,9 +1,3 @@
-Titles and internal titles
-Intro - project's aim
-Technologieis
-launch
-extra: scope of functionalities, examples of use, status, sources
-
 # javascript-challenge
 Unit 14 homework on intro to javascript
 
