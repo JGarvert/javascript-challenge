@@ -22,6 +22,8 @@ Create a basic HTML web page or use the [index.html](StarterCode/index.html) fil
 
 * Complete all of Level 1 criteria.
 
+Essentially, update the html to includ 4 more buttons.  THen, which the app.js file, nest or loop the button criteria so that a user can filter on mutilple buttons or criteria
+
 * Using multiple `input` tags and/or select dropdowns, write JavaScript code so the user can to set multiple filters and search for UFO sightings using the following criteria based on the table columns:
 
   1. `date/time`
